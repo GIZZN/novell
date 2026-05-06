@@ -43,9 +43,12 @@ export default function Background({ location }: BackgroundProps) {
         fill
         style={{ objectFit: 'cover' }}
         priority
+        quality={85}
+        loading="eager"
         draggable={false}
         onDragStart={handleDragStart}
         onContextMenu={handleContextMenu}
+        sizes="100vw"
       />
     </div>
   );

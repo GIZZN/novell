@@ -106,9 +106,12 @@ export default function TitleScreen({ onStart, onContinue }: TitleScreenProps) {
             fill
             style={{ objectFit: 'cover' }}
             priority
+            quality={90}
+            loading="eager"
             draggable={false}
             onDragStart={handleDragStart}
             onContextMenu={handleContextMenu}
+            sizes="100vw"
           />
         </div>
 

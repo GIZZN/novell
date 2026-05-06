@@ -33,9 +33,12 @@ export default function CGImage({ imagePath, onNext }: CGImageProps) {
           height={600}
           style={{ width: '100%', height: 'auto' }}
           priority
+          quality={90}
+          loading="eager"
           draggable={false}
           onDragStart={handleDragStart}
           onContextMenu={handleContextMenu}
+          sizes="(max-width: 768px) 90vw, 500px"
         />
       </div>
       

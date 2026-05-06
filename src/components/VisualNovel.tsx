@@ -7,6 +7,7 @@ import DialogueBox from './DialogueBox';
 import CGImage from './CGImage';
 import TitleScreen from './TitleScreen';
 import GameMenu from './GameMenu';
+import ImagePreloader from './ImagePreloader';
 import storyData from '@/data/story.json';
 import type { Story, Scene } from '@/types/story';
 import { getCookie, deleteCookie } from '@/lib/cookies';
@@ -345,6 +346,9 @@ export default function VisualNovel() {
 
   return (
     <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' }}>
+      {/* Предзагрузка изображений */}
+      <ImagePreloader />
+      
       {/* Меню игры с аватаром */}
       {username && !showEnding && (
         <GameMenu

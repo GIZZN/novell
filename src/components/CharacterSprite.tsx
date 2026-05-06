@@ -57,9 +57,13 @@ export default function CharacterSprite({
         width={800}
         height={1200}
         style={{ height: '85vh', width: 'auto' }}
+        priority
+        quality={85}
+        loading="eager"
         draggable={false}
         onDragStart={handleDragStart}
         onContextMenu={handleContextMenu}
+        sizes="(max-width: 768px) 50vw, 33vw"
       />
     </div>
   );

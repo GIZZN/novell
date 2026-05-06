@@ -1,0 +1,99 @@
+.sprite {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.left {
+  left: 40px;
+}
+
+.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center.sprite {
+  animation: fadeInUpCenter 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUpCenter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Специальная позиция для Майи - опущена ниже */
+.center.mayaSprite {
+  animation: fadeInUpCenterMaya 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUpCenterMaya {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(30px + 100px));
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 100px);
+  }
+}
+
+/* Специальная позиция для Алекса - опущен немного ниже */
+.center.alexSprite {
+  animation: fadeInUpCenterAlex 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUpCenterAlex {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(30px + 50px));
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 50px);
+  }
+}
+
+.right {
+  right: 40px;
+}
+
+/* Специальные позиции для full-body спрайтов в scene_2 */
+.fullLeft {
+  left: 1165px;
+  top: 475;
+}
+
+.fullRight {
+  right: 550px;
+}
+
+/* Уменьшенный размер для full-body спрайтов */
+.fullRight img {
+  height: 470px !important;
+  width: auto !important;
+}
+
+.fullLeft img {
+  height: 430px !important;
+  width: auto !important;
+}

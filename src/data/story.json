@@ -1,5 +1,5 @@
 {
-  "title": "Забытый ключ",
+  "title": "Lina",
   "description": "Визуальная новелла о случайной находке, которая приводит к неожиданным знакомствам. Игрок находит загадочный ключ и должен решить, кому его вернуть, что определит дальнейшее развитие истории.",
   "characters": {
     "player": {
@@ -74,6 +74,11 @@
         {
           "character": "narrator",
           "text": "Ключ тяжёлый и холодный. На нём видны следы времени, но узор всё ещё чёткий. Кто-то явно дорожит этой вещью.",
+          "choices": null
+        },
+        {
+          "character": "narrator",
+          "text": "Присмотревшись, вы замечаете на обратной стороне ключа тонкую гравюровку — имя «Лина».",
           "choices": null
         },
         {
@@ -240,7 +245,7 @@
           "choices": [
             {
               "text": "Конечно, пойдём. Что случилось?",
-              "next": "scene_5_alex_cafe"
+              "next": "scene_4b_alex_key"
             },
             {
               "text": "Извини, мне правда нужно идти",
@@ -288,11 +293,33 @@
           "choices": [
             {
               "text": "Хочешь, я помогу тебе с подготовкой?",
-              "next": "scene_5_maya_library"
+              "next": "scene_4b_maya_key"
             },
             {
               "text": "Ну, теперь ключ у тебя. Удачи!",
               "next": "scene_5_maya_decline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene_4b_alex_key",
+      "location": "park",
+      "dialogue": [
+        {
+          "character": "player",
+          "text": "Слушай... хотел спросить... А чьё имя написано на ключе?",
+          "choices": null
+        },
+        {
+          "character": "alex",
+          "emotion": "neutral",
+          "text": "*на секунду сжимается* Это имя подруги нашей семьи.",
+          "choices": [
+            {
+              "text": "Понятно...",
+              "next": "scene_5_alex_cafe"
             }
           ]
         }
@@ -558,6 +585,28 @@
           "character": "narrator",
           "text": "ХОРОШАЯ КОНЦОВКА: Сохранённая память",
           "choices": null
+        }
+      ]
+    },
+    {
+      "id": "scene_4b_maya_key",
+      "location": "park_bench",
+      "dialogue": [
+        {
+          "character": "player",
+          "text": "Хотел спросить... А чьё имя написано на ключе?",
+          "choices": null
+        },
+        {
+          "character": "maya",
+          "emotion": "happy",
+          "text": "*тепло улыбается* Это имя моей прабабушки.",
+          "choices": [
+            {
+              "text": "Понятно...",
+              "next": "scene_5_maya_library"
+            }
+          ]
         }
       ]
     },

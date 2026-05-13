@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Забытый ключ",
+  title: "Lina",
   description: "Визуальная новелла о случайной находке",
 };
 

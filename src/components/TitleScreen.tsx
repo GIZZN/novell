@@ -122,7 +122,7 @@ export default function TitleScreen({ onStart, onContinue }: TitleScreenProps) {
         <div className={styles.content}>
           {/* Название игры */}
           <h1 className={styles.title}>
-            Забытый ключ
+            Lina
           </h1>
 
           {/* Подзаголовок */}

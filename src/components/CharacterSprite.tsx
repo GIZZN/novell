@@ -58,7 +58,8 @@ export default function CharacterSprite({
         height={1200}
         style={{ height: '85vh', width: 'auto' }}
         priority
-        quality={85}
+        quality={100}
+        unoptimized
         loading="eager"
         draggable={false}
         onDragStart={handleDragStart}

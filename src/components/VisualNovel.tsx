@@ -478,6 +478,7 @@ export default function VisualNovel() {
           background: 'black',
           zIndex: 200,
           display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
           animation: 'fadeIn 1s ease-out'
@@ -494,6 +495,38 @@ export default function VisualNovel() {
           }}>
             {endingText}
           </div>
+          <button
+            onClick={() => {
+              setShowEnding(false);
+              setShowTitleScreen(true);
+              setCurrentSceneId(story.structure.start);
+              setDialogueIndex(0);
+              previousBackgroundRef.current = '';
+            }}
+            style={{
+              marginTop: '48px',
+              padding: '14px 40px',
+              fontSize: '18px',
+              color: 'white',
+              background: 'transparent',
+              border: '2px solid rgba(167, 139, 250, 0.7)',
+              borderRadius: '8px',
+              cursor: 'pointer',
+              letterSpacing: '0.05em',
+              animation: 'scaleIn 1.5s ease-out 1.2s both',
+              transition: 'background 0.2s, border-color 0.2s',
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLButtonElement).style.background = 'rgba(167, 139, 250, 0.2)';
+              (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(167, 139, 250, 1)';
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLButtonElement).style.background = 'transparent';
+              (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(167, 139, 250, 0.7)';
+            }}
+          >
+            На главную
+          </button>
         </div>
       )}
 
